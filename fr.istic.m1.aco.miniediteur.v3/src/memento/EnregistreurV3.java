@@ -9,20 +9,20 @@ import receiver.MoteurEditionEnregistrable;
 
 public class EnregistreurV3 {
 
-	private Stack<MoteurEditionEnregistrable> defaire;
-	private Stack<MoteurEditionEnregistrable> refaire;
+	private Stack<MementoMoteurEdition> defaire;
+	private Stack<MementoMoteurEdition> refaire;
 	
-	public EnregistreurV3(Stack<MoteurEditionEnregistrable> defaire, Stack<MoteurEditionEnregistrable> refaire) {
+	public EnregistreurV3(Stack<MementoMoteurEdition> defaire, Stack<MementoMoteurEdition> refaire) {
 		this.defaire = defaire;
 		this.refaire = refaire;
 	}
 	
 	public EnregistreurV3() {
-		this.defaire = new Stack<MoteurEditionEnregistrable>();
-		this.refaire = new Stack<MoteurEditionEnregistrable>();
+		this.defaire = new Stack<MementoMoteurEdition>();
+		this.refaire = new Stack<MementoMoteurEdition>();
 	}
 
-	public void enregistrer(MoteurEditionEnregistrable m) {
+	public void enregistrer(MementoMoteurEdition m) {
 		this.defaire.add(m);
 	}
 	
@@ -31,21 +31,26 @@ public class EnregistreurV3 {
 			
 		}
 		else {
-			MoteurEditionEnregistrable etatMoteur = this.defaire.pop();
+			MementoMoteurEdition etatMoteur = this.defaire.pop();
+			MementoMoteurEdition cloneEtatMoteur = new MementoMoteurEdition(etatMoteur);
+			System.out.println("bufferClone : " + cloneEtatMoteur.getBuffer().getContenu().toString());
 			// TODO aller à cet état
-			etatMoteur.restaurer();
-			this.refaire.push(etatMoteur);
+			etatMoteur.getMoteur().restaurer(etatMoteur);
+			this.refaire.push(cloneEtatMoteur);
+			System.out.println("bufferClone - refaire : " + this.refaire.get(0).getBuffer().getContenu().toString());
 		}
 	}
 	
 	public void refaire() {
-		if(this.defaire.isEmpty()) {
+		if(this.refaire.isEmpty()) {
 			
 		}
 		else {
-			MoteurEditionEnregistrable etatMoteur = this.defaire.pop();
-			etatMoteur.restaurer();
-			this.defaire.push(etatMoteur);
+			MementoMoteurEdition etatMoteur = this.refaire.pop();
+			System.out.println("buffer : " + etatMoteur.getBuffer().getContenu().toString());
+			MementoMoteurEdition cloneEtatMoteur = new MementoMoteurEdition(etatMoteur);
+			etatMoteur.getMoteur().restaurer(etatMoteur);
+			this.defaire.push(cloneEtatMoteur);
 		}
 	}
 	
