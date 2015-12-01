@@ -7,6 +7,12 @@ import java.util.Stack;
 import command.Command;
 import receiver.MoteurEditionEnregistrable;
 
+/**
+ * Cette classe gère le mini éditeur
+ * Elle gère les modifications apportées au buffer et au presse papier
+ * 
+ * @author Clément G., Paul C.
+ */
 public class EnregistreurV3 {
 
 	private Stack<MementoMoteurEdition> defaire;
@@ -28,7 +34,7 @@ public class EnregistreurV3 {
 	
 	public void defaire() {
 		if(this.defaire.isEmpty()) {
-			
+			System.out.println("Il n'y a pas d'état précédent \n");
 		}
 		else {
 			MementoMoteurEdition etatMoteur = this.defaire.pop();
@@ -37,14 +43,12 @@ public class EnregistreurV3 {
 			this.refaire.push(cloneEtatMoteur);
 			// on restaure l'état
 			etatMoteur.getMoteur().restaurer(etatMoteur);
-			System.out.println("taille pile defaire : " + this.defaire.size());
-			System.out.println("taille pile refaire : " + this.refaire.size());
 		}
 	}
 	
 	public void refaire() {
 		if(this.refaire.isEmpty()) {
-			
+			System.out.println("Il n'y a pas d'état suivant \n");
 		}
 		else {
 			MementoMoteurEdition etatMoteur = this.refaire.pop();
