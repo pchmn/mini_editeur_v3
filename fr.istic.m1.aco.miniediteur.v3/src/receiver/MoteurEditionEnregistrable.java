@@ -31,6 +31,8 @@ public class MoteurEditionEnregistrable<Memento> extends MoteurEdition {
 
 	public void enregistrer() {
 		MementoMoteurEdition m = setMemento();
+		System.out.println("buffer : " + m.getBuffer().getContenu().toString());
+		System.out.println("debut : " + m.getSelection().getDebut());
 		this.enregistreur.enregistrer(m);
 	}
 	

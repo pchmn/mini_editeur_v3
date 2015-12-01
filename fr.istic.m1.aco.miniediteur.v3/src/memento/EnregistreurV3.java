@@ -31,13 +31,13 @@ public class EnregistreurV3 {
 			
 		}
 		else {
-			MementoMoteurEdition etatMoteur = this.defaire.pop();
-			MementoMoteurEdition cloneEtatMoteur = new MementoMoteurEdition(etatMoteur);
-			System.out.println("bufferClone : " + cloneEtatMoteur.getBuffer().getContenu().toString());
+			MementoMoteurEdition etatMoteur = this.defaire.pop();		
+			MementoMoteurEdition cloneEtatMoteur = etatMoteur.getMoteur().setMemento();
 			// TODO aller à cet état
 			etatMoteur.getMoteur().restaurer(etatMoteur);
 			this.refaire.push(cloneEtatMoteur);
-			System.out.println("bufferClone - refaire : " + this.refaire.get(0).getBuffer().getContenu().toString());
+			System.out.println("taille pile defaire : " + this.defaire.size());
+			System.out.println("taille pile refaire : " + this.refaire.size());
 		}
 	}
 	
@@ -47,8 +47,7 @@ public class EnregistreurV3 {
 		}
 		else {
 			MementoMoteurEdition etatMoteur = this.refaire.pop();
-			System.out.println("buffer : " + etatMoteur.getBuffer().getContenu().toString());
-			MementoMoteurEdition cloneEtatMoteur = new MementoMoteurEdition(etatMoteur);
+			MementoMoteurEdition cloneEtatMoteur = etatMoteur.getMoteur().setMemento();
 			etatMoteur.getMoteur().restaurer(etatMoteur);
 			this.defaire.push(cloneEtatMoteur);
 		}
