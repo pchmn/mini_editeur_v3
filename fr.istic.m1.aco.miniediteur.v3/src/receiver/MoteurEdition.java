@@ -137,7 +137,7 @@ public class MoteurEdition implements MoteurEditionInterface
 			this.selection.setLongueur(longueur);
 			this.selection.setContenu(this.buffer.getContenu().substring(debut, debut + longueur));
 		} catch (Exception e) {
-			System.out.println(e + "\n");
+			System.err.println("La sélection est hors du texte, elle n'a pas été prise en compte.");
 			this.selection.setDebut(this.buffer.getContenu().toString().length());
 			this.selection.setLongueur(0);
 			this.selection.setContenu("");
