@@ -8,6 +8,9 @@ import memento.EnregistreurV3;
 import receiver.*;
 
 /**
+ * Classe Editeur <br>
+ * C'est le main de la version 3 <br>
+ * Elle permet de lancer le programme
  * 
  * @author Clément G., Paul C.
  *
@@ -25,7 +28,7 @@ public class EditeurV3 {
 	
 	
 	/**
-	 * Texte a saisir
+	 * Demande le texte à saisir et le retourne
 	 * 
 	 * @return StringBuffer
 	 */
@@ -38,7 +41,7 @@ public class EditeurV3 {
 	
 	
 	/**
-	 * numero du caractere de debut de sélection
+	 * Demande le numero du caractère de debut de sélection et le retourne
 	 * 
 	 * @return int
 	 */
@@ -62,9 +65,9 @@ public class EditeurV3 {
 	}
 	
 	/**
-	 * Nombre de caracteres à sélectionner
+	 * Demande le nombre de caractères à sélectionner et le retourne
 	 * 
-	 * @return
+	 * @return int
 	 */
 	public int getLongueur(){
 		Scanner sc = new Scanner(System.in);
@@ -85,8 +88,12 @@ public class EditeurV3 {
 		return sc.nextInt();
 	}
 	
-	
-	
+	/**
+	 * La fonction main de la version 3 <br>
+	 * Lance le programme
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args){
 		
 		// Initialisation
@@ -99,7 +106,7 @@ public class EditeurV3 {
 		do {
 			
 			// Menu
-			System.out.println("Votre texte : " + moteur.getSelection());
+			System.out.println("\nVotre texte : " + moteur.getSelection());
 			ihm.menu();
 			
 			// En attente du choix
@@ -135,12 +142,12 @@ public class EditeurV3 {
 			
 			// Défaire
 			} else if (choix.equalsIgnoreCase("d")) {
-				System.out.println("Retour à l'état précédent \n");
+				System.out.println("Retour à l'état précédent");
 				enregistreur.defaire();
 				
 			// Refaire
 			} else if (choix.equalsIgnoreCase("r")) {
-				System.out.println("Avance jusqu'à l'état suivant \n");
+				System.out.println("Avance jusqu'à l'état suivant");
 				enregistreur.refaire();
 			}
 			

@@ -32,7 +32,7 @@ public class Saisir implements Command
 	}
 
 	/**
-	 * Récupére le texte saisi dans l'ihm
+	 * Récupére le texte saisi dans l'ihm <br>
 	 * Exécute ensuite la commande avec ce texte
 	 */
 	public void execute() {	

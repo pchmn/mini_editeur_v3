@@ -5,7 +5,7 @@ import command.Command;
 import invoker.IHMInterface;
 
 /**
- * Classe IHM pour la version 2
+ * Classe IHM pour la version 3
  * 
  * @author Clément G., Paul C.
  */

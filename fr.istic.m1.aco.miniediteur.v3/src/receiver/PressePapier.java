@@ -1,7 +1,5 @@
 package receiver;
 
-
-
 /**
  * Cette classe est le presse papier du mini éditeur
  * 

@@ -51,6 +51,10 @@ public class Buffer
 		this.contenu = new StringBuffer();
 	}
 	
+	/**
+	 * Constructeur
+	 * @param sb
+	 */
 	public Buffer(StringBuffer sb) {
 		this.contenu = sb;
 	}
