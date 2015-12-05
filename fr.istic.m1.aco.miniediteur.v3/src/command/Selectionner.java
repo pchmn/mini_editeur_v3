@@ -32,7 +32,7 @@ public class Selectionner implements Command{
 	}
 	
 	/**
-	 * Récupère le début et la longueur de la sélection saisis dans l'ihm
+	 * Récupère le début et la longueur de la sélection saisis dans l'ihm <br>
 	 * Exécute ensuite la commande avec ces paramètres
 	 */
 	public void execute(){
