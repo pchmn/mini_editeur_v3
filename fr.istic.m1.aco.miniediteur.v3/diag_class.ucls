@@ -85,7 +85,7 @@
   </class>  
   <interface id="10" language="java" name="invoker.IHMInterface" project="fr.istic.m1.aco.miniediteur.v3" 
     file="/fr.istic.m1.aco.miniediteur.v3/src/invoker/IHMInterface.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1118" y="-97"/>    
+    <position height="-1" width="-1" x="1121" y="-112"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -119,145 +119,211 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="14">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="15" name="ihm"/>      
-      <multiplicity id="16" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="17">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="18" name="buffer"/>      
-      <multiplicity id="19" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="20">    
-    <bendpoint x="184" y="336"/>    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="21" name="moteur"/>      
-      <multiplicity id="22" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="23">    
+  <class id="14" language="java" name="command.Defaire" project="fr.istic.m1.aco.miniediteur.v3" 
+    file="/fr.istic.m1.aco.miniediteur.v3/src/command/Defaire.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1146" y="207"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="15" language="java" name="command.Command" project="fr.istic.m1.aco.miniediteur.v3" 
+    file="/fr.istic.m1.aco.miniediteur.v3/src/command/Command.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="846" y="71"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="16" language="java" name="command.Refaire" project="fr.istic.m1.aco.miniediteur.v3" 
+    file="/fr.istic.m1.aco.miniediteur.v3/src/command/Refaire.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1144" y="57"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <realization id="17">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="15"/>  
+  </realization>  
+  <association id="18">    
     <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="24" name="refaire"/>      
-      <multiplicity id="25" minimum="0" maximum="2147483647"/>    
+      <attribute id="19" name="refaire"/>      
+      <multiplicity id="20" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="26">    
+  <association id="21">    
     <end type="SOURCE" refId="12" navigable="false">      
-      <attribute id="27" name="editeur"/>      
-      <multiplicity id="28" minimum="0" maximum="1"/>    
+      <attribute id="22" name="editeur"/>      
+      <multiplicity id="23" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="29">    
+  <realization id="24">    
     <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="11"/>  
   </realization>  
-  <generalization id="30">    
+  <generalization id="25">    
     <end type="SOURCE" refId="8"/>    
     <end type="TARGET" refId="13"/>  
   </generalization>  
-  <association id="31">    
+  <association id="26">    
     <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="32" name="moteurEditionInterface"/>      
-      <multiplicity id="33" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="34">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="35" name="selection"/>      
-      <multiplicity id="36" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="9" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="37">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="38" name="ihm"/>      
-      <multiplicity id="39" minimum="0" maximum="1"/>    
+      <attribute id="27" name="ihm"/>      
+      <multiplicity id="28" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="12" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="40">    
+  <association id="29">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="30" name="commande"/>      
+      <multiplicity id="31" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="32">    
     <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="41" name="pressePapier"/>      
-      <multiplicity id="42" minimum="0" maximum="1"/>    
+      <attribute id="33" name="pressePapier"/>      
+      <multiplicity id="34" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="43">    
+  <association id="35">    
     <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="44" name="buffer"/>      
-      <multiplicity id="45" minimum="0" maximum="1"/>    
+      <attribute id="36" name="buffer"/>      
+      <multiplicity id="37" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="46">    
-    <end type="SOURCE" refId="13"/>    
-    <end type="TARGET" refId="3"/>  
-  </realization>  
-  <association id="47">    
-    <bendpoint x="157" y="556"/>    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="48" name="defaire"/>      
-      <multiplicity id="49" minimum="0" maximum="2147483647"/>    
+  <association id="38">    
+    <bendpoint x="1057" y="155"/>    
+    <bendpoint x="1039" y="331"/>    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="39" name="enregistreur"/>      
+      <multiplicity id="40" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
+    <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="50">    
+  <association id="41">    
     <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="51" name="enregistreur">        
+      <attribute id="42" name="enregistreur">        
         <position height="19" width="74" x="-79" y="286"/>      
       </attribute>      
-      <multiplicity id="52" minimum="0" maximum="1">        
+      <multiplicity id="43" minimum="0" maximum="1">        
         <position height="17" width="25" x="-131" y="283"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="53">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="54" name="pressePapier"/>      
-      <multiplicity id="55" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="56">    
+  <realization id="44">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="15"/>  
+  </realization>  
+  <association id="45">    
     <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="57" name="moteurEditionInterface"/>      
-      <multiplicity id="58" minimum="0" maximum="1"/>    
+      <attribute id="46" name="moteurEditionInterface"/>      
+      <multiplicity id="47" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="59">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="60" name="selection"/>      
-      <multiplicity id="61" minimum="0" maximum="1"/>    
+  <association id="48">    
+    <bendpoint x="1006" y="484"/>    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="49" name="enregistreur"/>      
+      <multiplicity id="50" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="51">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="52" name="ihm"/>      
+      <multiplicity id="53" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="54">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="55" name="buffer"/>      
+      <multiplicity id="56" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="57">    
+    <bendpoint x="184" y="336"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="58" name="moteur"/>      
+      <multiplicity id="59" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="60">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="61" name="moteurEditionInterface"/>      
+      <multiplicity id="62" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="63">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="64" name="selection"/>      
+      <multiplicity id="65" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="62">    
+  <realization id="66">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <association id="67">    
+    <bendpoint x="157" y="556"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="68" name="defaire"/>      
+      <multiplicity id="69" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="70">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="15"/>  
+  </realization>  
+  <association id="71">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="72" name="pressePapier"/>      
+      <multiplicity id="73" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="74">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="75" name="selection"/>      
+      <multiplicity id="76" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="77">    
     <end type="SOURCE" refId="12"/>    
     <end type="TARGET" refId="10"/>  
   </realization>  
