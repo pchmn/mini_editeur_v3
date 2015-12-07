@@ -33,7 +33,7 @@ public class TestMoteurEdition extends TestCase {
 	}
 	
 	/**
-	 * Deux saisies à la suite
+	 * Deux saisi à la suite
 	 */
 	public void testSaisir2() {
 		MoteurEdition moteurEdition = new MoteurEdition();

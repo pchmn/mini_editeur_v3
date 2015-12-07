@@ -18,6 +18,23 @@ public class EnregistreurV3 {
 	private Stack<MementoMoteurEdition> defaire;
 	private Stack<MementoMoteurEdition> refaire;
 	
+	
+	public Stack<MementoMoteurEdition> getDefaire() {
+		return defaire;
+	}
+
+	public void setDefaire(Stack<MementoMoteurEdition> defaire) {
+		this.defaire = defaire;
+	}
+
+	public Stack<MementoMoteurEdition> getRefaire() {
+		return refaire;
+	}
+
+	public void setRefaire(Stack<MementoMoteurEdition> refaire) {
+		this.refaire = refaire;
+	}
+
 	/**
 	 * Constructeur
 	 * @param defaire
