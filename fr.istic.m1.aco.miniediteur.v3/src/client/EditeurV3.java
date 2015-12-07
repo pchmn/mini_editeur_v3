@@ -143,12 +143,14 @@ public class EditeurV3 {
 			// Défaire
 			} else if (choix.equalsIgnoreCase("d")) {
 				System.out.println("Retour à l'état précédent");
-				enregistreur.defaire();
+				cmd = new Defaire(enregistreur);
+				cmd.execute();
 				
 			// Refaire
 			} else if (choix.equalsIgnoreCase("r")) {
 				System.out.println("Avance jusqu'à l'état suivant");
-				enregistreur.refaire();
+				cmd = new Refaire(enregistreur);
+				cmd.execute();
 			}
 			
 		// Quitte quand on écrit q
