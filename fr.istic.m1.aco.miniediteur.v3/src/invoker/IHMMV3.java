@@ -1,8 +1,7 @@
-package invoker_v3;
+package invoker;
 
 import client.EditeurV3;
 import command.Command;
-import invoker.IHMInterface;
 
 /**
  * Classe IHM pour la version 3

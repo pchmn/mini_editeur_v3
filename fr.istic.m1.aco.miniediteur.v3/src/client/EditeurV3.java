@@ -3,7 +3,7 @@ package client;
 import java.util.Scanner;
 
 import command.*;
-import invoker_v3.IHMMV3;
+import invoker.IHMMV3;
 import memento.EnregistreurV3;
 import receiver.*;
 
